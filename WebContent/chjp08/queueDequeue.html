@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script>
+	$(function(){
+		$(".txt1")
+		.animate({marginLeft: "200px"}, 1000)
+		.animate({marginTop: "200px"}, 1000)
+		.queue(function () {
+			$(this).css({background: "red"});
+			//queue 메서드 생성후 dequeue 없을 시 메서드 다음 생성 못함.
+			 $(this).dequeue();  
+			})
+			.animate({marginLeft: "0"}, 1000)
+			.animate({marginTop: "0"}, 1000);
+	});
+
+</script>
+<style type="text/css">
+	*{
+	margin: 0;
+	}
+	.txt1{
+	width: 50px; 
+	text-align: center;
+	background-color: aqua;
+	}
+</style>
+</head>
+<body>
+		<p class = "txt1">내용1</p>
+</body>
+</html>

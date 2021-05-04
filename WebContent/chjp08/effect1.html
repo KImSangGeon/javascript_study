@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script>
+function SlideUp(){
+	$(".btn1").hide();
+	$(".btn2").show();
+}
+
+function FadeIn () {
+	$(".btn2").hide();
+	$(".btn1").show();
+}
+
+function SlideToggle() {
+	$(".box").slideToggle(1000, "linear");				
+}
+function FadeTo1() {
+	$(".box").fadeTo("fast", 0.3);
+}
+function FadeTo2() {
+	$(".box").fadeTo("fast", 1);
+	
+}
+
+
+		$(function(){
+			//우선 생성되고 위에 진행이기에 하이드 먼저두고 위에는 매서드로 뺴버림
+			$(".btn2").hide();			
+			
+			$(".btn1").on("click", function() {
+				$(".box").slideUp(1000, "linear", SlideUp);
+			});
+			
+			$(".btn2").on("click", function() {
+				$(".box").fadeIn(1000, "swing", FadeIn);				
+			});			
+			
+			$(".btn3").on("click", SlideToggle);
+			
+			$(".btn4").on("click", FadeTo1);
+			
+			$(".btn5").on("click", FadeTo2);		
+			
+		});
+		
+</script>
+<style type="text/css">
+	.content{
+	width: 400px;
+	background-color: #eee;
+	}
+</style>
+</head>
+<body>
+		<p>
+			<button class = "btn1">slideUp</button>
+			<button class = "btn2">fadeIn</button>
+		</p>
+		<p>
+			<button class = "btn3">toggleSlide</button>
+		</p>
+		<p>
+			<button class = "btn4">fadeTo(0.3)</button>
+			<button class = "btn5">fadeTo(1)</button>
+		</p>
+		<div class = "box">
+			<div class = "content">
+				원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 
+				각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다.
+				 국토와 자원은 국가의 보호를 받으며, 국가는 그 균형있는 개발과 이용을 위하여 필요한 계획을 수립한다.
+			</div>
+		</div>
+</body>
+</html>

@@ -4,17 +4,20 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 			<script type="text/javascript">
-				function chColor() {
-					var arrColor = ["#ffo", "#6c0", "#fcf", "#cf0", "#39f"];
-					var arrNum = Math.floor(Math.random() * arrColor.length);
-						var bodyTag = document.getElementById("theBody");
-					bodyTag.style.backgroundColor = arrColor[arrNum];
-				}
+				var price1 =3000;
+				var price2 =3000;
+				var price3 =3000;
+				
+				var total = price1 + price2 + price3;
+				var result = total > 10000 ? total - 10000 + "원 초과" : "돈 관리 잘했네";
+				
+				document.write(result);
+			
+						
+				result   
 			</script>
 </head>
-<body id = "theBody">
-
-	<button onclick = "chColor();" >배경 색상 바꾸기 </button>
+<body>
 
 </body>
 </html>
