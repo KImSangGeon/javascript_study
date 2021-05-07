@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>별점주기 with Jquery </title>
+<link rel = "stylesheet" href = "css/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script>
+	$(function(){
+		$(".stars .fa").click(function() {
+			$(this).addClass("active");
+			$(this).prevAll().addClass("active");
+			$(this).nextAll().removeClass("active");
+			
+			var starRate = $(this).index() +1;
+			/*숫자로 나오는지 확인 $(".print").text(starRate);*/
+		
+			var notice = ["Too bad", "Not good", "so-so", "nice", "so happy"];
+			$(".print").html('<img src = "images/star-lv'+starRate+ '.png">' +  notice[starRate -1])
+	
+			/* if(starRate == 1){
+				$(".print").html('<img src = "images/star-lv1.png">' +  "Too bad")
+			}else if(starRate == 2){
+				$(".print").html('<img src = "images/star-lv2.png">' +  "Not good")
+			}else if(starRate == 3){
+				$(".print").html('<img src = "images/star-lv3.png">' +  "so-so")
+			}else if(starRate == 4){
+				$(".print").html('<img src = "images/star-lv4.png">' +  "nice")
+			}else{
+				$(".print").html('<img src = "images/star-lv5.png">' +  "so good")
+			} */
+		});		
+	});
+</script>
+</head>
+<body>
+		<div class = "star-rating">
+			<div class = "stars">
+				<i class = "fa fa-star"></i>
+				<i class = "fa fa-star"></i>
+				<i class = "fa fa-star"></i>
+				<i class = "fa fa-star"></i>
+				<i class = "fa fa-star"></i>			
+			</div>		
+			<div class = "print">별점 주실거죠? ㅎ</div>
+		</div>
+</body>
+</html>
