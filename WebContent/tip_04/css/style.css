@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body{
+	font-family:  'Montserrat', sans-serif;
+	background-color:#eee;
+	/* 센터맞추기 */
+	display: flex;;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;	 
+}
+
+
+a{
+	text-decoration: none;
+	color: #222;
+	
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+}
+
+.item{
+	border-radius: 10px;
+	overflow:hidden;
+	position: relative;
+	box-shadow: 0 0 20px rgba(0, 0 , 0, 0.164);
+}
+.item img{
+	transition: 1s;	
+}
+.item:hover img{
+	filter: blur(2px);
+}
+.detail{
+/* position에 앱솔루트가 들어가면 inline으로 변경 그래서 값을 줘야함 */
+	background-color: #f8f8f8;
+	position: absolute;
+	left: 0;
+	bottom: -180px;
+	width:100%;
+	height: 250px;	
+	transition: 1s;
+	
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.item:hover .detail {
+	bottom: 0;	
+}
+
+/* title */
+.title{
+	border-bottom: 1px solid #ddd;
+/* 	자식 요소가 float 속성이 들어가 있으므로 크기를 잃어버림 */
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.title h2{
+	font-size: 16px;
+	color: #888;
+	line-height: 1.2em;
+	float: left;
+}
+.title h2 em{
+	font-style: normal;
+	display: block;
+	color: #000;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.title .price{
+	float: right;
+	margin-top: 15px;
+	font-size: 20px;
+	color:crimson; 	
+}
+
+/* info */
+.info{
+	position: relative;	
+}
+/* size */
+.size{
+	margin-bottom: 10px;
+}
+.size label,
+ .color label{
+		display: block;
+		margin-bottom: 5px;
+}
+.size span{
+	font-size: 12px;
+/* background-color: #000;
+	color: #fff; */
+	margin-right: 5px;
+	/* span inline tag라서 사이즈 못받음 그래서 변경 */
+	display:inline-block;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	padding: 2px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.size span.active,
+.size span:hover{
+	color: #fff;
+	background-color: #000; 
+}
+/* color */
+.color label{
+	margin-bottom: 5px;
+}
+.color span, .size span{
+	transition:0.5s;	
+}
+.color span{	
+	display:inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right:5px;
+	cursor: pointer;	
+}
+.color span.active,
+.color span:hover{
+	border-radius: 50%;
+}
+.color span:nth-of-type(1) {
+	background-color: #808080;
+}
+.color span:nth-of-type(2) {
+	background-color: #408080;
+}
+.color span:nth-of-type(3) {
+	background-color: #800000;
+}
+.color span:nth-of-type(4) {
+	background-color: #004080;
+}
+.color span:nth-of-type(5) {
+	background-color: #0080ff;
+}
+.add-cart{
+	border: 1px solid #ddd;
+	width: 100%;
+	padding: 7px;
+	margin-top: 5px;
+	background-color: #fff;
+	cursor: pointer;
+	outline: none;
+}
+.add-cart:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+/* like */
+.like{
+	cursor: pointer;	
+}
+.like:before {
+	content: '\f08a';
+	font-family: fontawesome;
+	color: #bbb;
+	position: absolute;
+	right:0; 
+	top: 0;	
+}
+.like.active:before{
+	content: "\f004";
+	color: crimson;	
+}
+
+

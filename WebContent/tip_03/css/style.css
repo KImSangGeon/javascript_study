@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body{
+	margin: 0;
+	font-family:  'Montserrat', sans-serif;
+	/* background:#000;  테스트 */
+	
+}
+
+.navi{
+	position: absolute;
+	/* 정중앙 맞추기 */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	 
+	/* 글자위로 사진 나오게하는 센터부분 */
+	z-index: 100;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.navi li{}
+
+.navi li a{
+	font-size: 4em;
+	text-decoration: none;
+	color: #fff;
+	/* 부모 : relative에다가 자식 : absolute에게  포지션을 줘야함*/
+	position: relative;
+}
+
+.navi li a:after{
+	position:absolute;
+	color:yellowgreen;
+	/* 같은 위치에 덮어쓴다 */
+	top:0;
+	left:0;
+	width:10%;
+	overflow:hidden;
+	content: attr(data-text);
+	transition:1s;
+}
+.navi li a:hover:after {
+	width: 100%;	
+}
+.navi li a:focus:after {
+	width: 100%;	
+}
+.photo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+/* background: url("../images/portrait-initial.jpg") no-repeat center center; */
+	background-image: url("../images/portrait-initial.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	/* 화면 크기 줄여도 사진 안깨짐 */
+	background-size: cover;
+}
+
+

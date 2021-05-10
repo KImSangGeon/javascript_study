@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+		$(function(){
+		
+			$('.navi li').on({
+				"mouseover focusin": function() {
+					/* var changeImage = $(this).attr("data-image"); */
+					var idx = $(this).index() +1;
+					$(".photo").css({
+						'background-image' : 'url(images/portrait-0' + idx +'.jpg)'});
+				},
+				"mouseout focusout": function () {
+					$(".photo").css({
+						'background-image' : ''	});
+			}
+		
+			});
+		});
+</script>
+</head>
+<body>
+	<div class="container">
+		<ul class="navi">
+			<!-- 글자에다가 덮어쓰기 data- text -->
+			<li><a href="#none"
+				data-text="ABOUT">ABOUT</a></li>
+			<li><a href="#none"
+				data-text="INSTRUCTOR">INSTRUCTOR</a></li>
+			<li><a href="#none"
+				data-text="CLASS">CLASS</a></li>
+			<li><a href="#none"
+				data-text="LOCATION">LOCATION</a></li>
+		</ul>
+		<div class="photo"></div>
+	</div>
+
+</body>
+</html>

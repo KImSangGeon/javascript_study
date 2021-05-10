@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "css/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+
+<script>
+	
+$(function(){
+	$(".btn li").click(function() {
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");		
+	
+		$(".tabs div").removeClass("active")
+		$(".tabs div").eq($(this).index()).addClass("active");		
+	});
+});
+	
+</script>
+</head>
+<body>
+	<section>
+	<div class = "heading">		
+		<h1><span>웹개발자</span><br>탭 메뉴 Tip &Tech</h1>
+		<input type = "text" placeholder= "What are you looking for?">
+	</div>
+	<div class = "tab-inner">
+		<ul class = "btn">
+			<li class = "active">HTML5</li>
+			<li>CSS3</li>
+			<li>JQUERY</li>
+			<li>JAVASCRIPT</li>
+			<li>CSS FRAMEWORKS</li>		
+		</ul>
+			<div class = "tabs">
+				<div class = "active">
+				<h2>HTML5</h2>
+				<img alt = "" src = "images/platform-logo-01.png">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut massa sapien, 
+				ultricies id luctus ut, dictum malesuada enim. Nullam non elit sapien. Mauris at sem nulla. 
+				Donec quis dolor at leo rhoncus accumsan. Duis euismod, sapien non suscipit luctus, 
+				eros nibh feugiat nunc, a malesuada magna massa in velit. Vestibulum porta dolor quis nisl consectetur,
+				id commodo mauris convallis. Vestibulum feugiat commodo fermentum. Aenean rutrum,
+				nisi et posuere pharetra, leo justo commodo urna, eget venenatis augue enim vitae neque. Duis commodo,
+				orci eu imperdiet auctor, arcu massa auctor justo, consequat molestie dolor velit eget orci. Ut in elit pharetra,
+				sollicitudin turpis id, tincidunt lectus. Cras id mattis eros, eu molestie nunc. Etiam condimentum est ex, 
+				in accumsan sem tincidunt at. Nulla facilisi. Aliquam sodales tempus purus, non tristique ipsum consectetur porta.
+				</p>
+				</div>
+				<div>
+				<h2>CSS3</h2>
+				<img alt = "" src = "images/platform-logo-02.png">
+				<p>
+			Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+				</p>
+				</div>
+				<div>
+				<h2>JQUERY</h2>
+				<img alt = "" src = "images/platform-logo-03.png">
+				<p>
+	The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+				</div>
+				<div>	
+				<h2>JAVASCRIPT</h2>
+				<img alt = "" src = "images/platform-logo-04.png">
+				<p>
+			Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+				</p>
+				</div>
+				<div>
+				<h2>CSS FRAMEWORKS</h2>
+				<img alt = "" src = "images/platform-logo-05.png">
+				<p>
+			Where can I get some?
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p></div>
+			</div>		
+		</div>
+	</section>
+</body>
+</html>
