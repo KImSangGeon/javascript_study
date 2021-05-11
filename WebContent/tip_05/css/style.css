@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+body{
+		font-family: 'Noto Sans KR', sans-serif;
+		color: #222;
+		margin: 0;
+		font-weight: 300;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+}
+
+/* Layout */
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;	
+}
+section article{
+/* border: 1px solid red; */
+	width: 980px;
+	height: 500px;
+}
+/* heading */
+.heading{
+	/* 임시 부여 */
+	/* border: 1px solid #000;
+	height: 100px;  */
+	text-align: center;
+}
+.heading span{
+	color: crimson;
+	font-size: 25px;
+}
+.heading h1{
+	font-size: 34px;
+	margin-top: 10px;
+}
+.heading h1 em{
+	font-style: normal;
+/*	border: 1px solid black; */
+/* relative를 하려면 부모에 absolute는 자식 */
+	position: relative;
+}
+.heading h1 em:after{
+	position: absolute;
+	content: url("../images/logo-kakao.png");
+	top: -25px;
+	right: -30px;
+}
+/* content */
+.content{
+}
+/* >를 넣으므로써 바로 밑에 자식 div .accordian에만 적용 */
+.content > div{
+/*	border:  1px solid blue; */
+	width: 50%;
+	float: left;
+	height: 400px;
+	/* 사이즈 맞춰주기 */
+	box-sizing: border-box;
+}
+.accordian{
+	
+}
+.title{
+	border: 1px solid #ddd;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	padding-left: 15px;
+	
+	margin-bottom: 10px;
+}
+
+.title:after{
+	/* after쓰면 content 붙일 수 있음 */
+	content: '\f105';
+	font-family: fontawesome; 
+	float: right;
+	margin-right: 5px;
+	margin-top: 3px;
+	transition: 0.5s
+}
+.title.active:after{
+	/* active됬을때 작동 */
+	transform:rotate(90deg);
+	color: orange;
+}
+.title.active,
+.title:hover{
+	background-color: #203049;
+	color: #fff;
+}
+
+.desc{
+	padding: 20px;
+	display: none;
+}
+/* active된 것만 보이게 하기위에 .desc는 none .active는 block */
+.desc.active{
+	display: block;
+}
+
+.image{
+	
+}
