@@ -13,10 +13,10 @@
 			$(this).nextAll().removeClass("active");
 			
 			var starRate = $(this).index() +1;
-			/*숫자로 나오는지 확인 $(".print").text(starRate);*/
+			$(".print").text(starRate);
 		
 			var notice = ["Too bad", "Not good", "so-so", "nice", "so happy"];
-			$(".print").html('<img src = "images/star-lv'+starRate+ '.png">' +  notice[starRate -1])
+			$(".print").html('<img src = "images/star-lv'+starRate+ '.png">' +  notice[starRate -1]);
 	
 			/* if(starRate == 1){
 				$(".print").html('<img src = "images/star-lv1.png">' +  "Too bad")
